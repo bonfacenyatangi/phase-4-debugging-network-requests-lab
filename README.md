@@ -63,11 +63,14 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  It was displaying 500 Internal Server Error and NameError (uninitialized constant ToysController::Toys), so I changed the word Toys to Toy at the method create.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: 
+  It was displaying Unexpected end of json , so I made sure the update method was rendering json .
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+It was displaying: ActionController::RoutingError (No route matches [DELETE] "/toys/9"): and 404 (Not Found) so I added a destroy route in the Routes config file.
